@@ -23,7 +23,7 @@ export default function SearchBar() {
                     type="text" 
                     value={searchTerm} 
                     onChange={handleChange}
-                    placeholder="Search for images... (Press Enter)"
+                    placeholder="Search for images..."
                 />
             </form>
             <div className="">
