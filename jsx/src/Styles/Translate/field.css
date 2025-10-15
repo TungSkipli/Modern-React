@@ -1,0 +1,45 @@
+.Field-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+}
+
+.Field-wrapper label {
+    font-size: 16px;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    align-self: start;
+}
+
+.Field-wrapper textarea {
+    width: 100%;
+    height: 35px;
+    padding: 8px 10px;
+    font-size: 16px;
+    color: #000000;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    resize: none;
+    font-family: Arial, sans-serif;
+}
+
+.Field-wrapper textarea::placeholder {
+    color: #666;
+}
+
+.Field-wrapper textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.output-text {
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}

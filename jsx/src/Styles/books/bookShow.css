@@ -1,0 +1,221 @@
+.book-show {
+    background: white;
+    border: 2px solid black !important;
+    border-radius: 12px;
+    padding: 20px 20px 30px 20px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    bottom: 50px
+}
+
+.book-show:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.book-show h3 {
+    margin: 0 40px 15px 0;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    word-wrap: break-word;
+    flex-grow: 1;
+}
+
+.book-show .actions {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 4px;
+}
+
+.button-edit {
+    position: relative;
+    width: 100px !important;
+    height: 36px !important;
+    border: 1px solid #4db6ac !important;
+    border-radius: 4px !important;
+    margin-top: 10px !important;
+    margin-right: 10px !important;
+    background-color: #4db6ac !important;
+    color: white !important;
+    top: 230px;
+    
+}
+
+.button-cancel {
+    width: 100px !important;
+    height: 36px !important;
+    border: 1px solid #f44336 !important;
+    border-radius: 4px !important;
+    margin-top: 10px !important;
+    background-color: #f44336 !important;
+    color: white !important;
+    position: relative;
+    top: 230px;
+}
+
+.book-show .actions button {
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.book-show .actions .edit {
+    background-color: #4db6ac;
+    color: white;
+    font-size: 12px;
+}
+
+.book-show .actions .edit:hover {
+    background-color: #26a69a;
+    transform: scale(1.1);
+}
+
+.book-show .actions .delete {
+    background-color: #f44336;
+    color: white;
+    font-size: 12px;
+}
+
+.book-show .actions .delete:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1);
+}
+
+.book-show .actions .update {
+    background-color: #4db6ac;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.book-show .actions .update:hover {
+    background-color: #26a69a;
+    transform: scale(1.1);
+}
+
+.book-show .actions .cancel {
+    background-color: #f44336;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.book-show .actions .cancel:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1);
+}
+
+.book-show .edit-content {
+    flex-grow: 1;
+}
+
+.book-show .edit-content h3 {
+    color: black;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.book-show .edit-content .input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid black;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.book-show .edit-content .input:focus {
+    outline: none;
+    border-color: #26a69a;
+    box-shadow: 0 0 0 3px rgba(77, 182, 172, 0.1);
+}
+
+.book-show .book-edit-container {
+    margin: 0;
+    padding: 0;
+}
+
+.book-show .book-edit-form {
+    background: transparent;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.book-show .book-edit-form h3 {
+    color: #4db6ac;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.book-show .book-edit-form .input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid #4db6ac;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.book-show .book-edit-form .input:focus {
+    outline: none;
+    border-color: #26a69a;
+    box-shadow: 0 0 0 3px rgba(77, 182, 172, 0.1);
+}
+
+.book-show .book-edit-form .button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 8px;
+    min-width: 60px;
+    transition: all 0.2s ease;
+}
+
+.book-show .book-edit-form .button:hover {
+    transform: scale(1.05);
+}
+
+.book-show .book-edit-form .button:not(.cancel) {
+    background-color: white;
+    color: #4db6ac;
+    border: 2px solid #4db6ac;
+}
+
+.book-show .book-edit-form .button:not(.cancel):hover {
+    background-color: #4db6ac;
+    color: white;
+}
+
+.book-show .book-edit-form .button.cancel {
+    background-color: #f44336;
+    color: white;
+}
+
+.book-show .book-edit-form .button.cancel:hover {
+    background-color: #d32f2f;
+}

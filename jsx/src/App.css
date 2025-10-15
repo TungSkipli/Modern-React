@@ -1,0 +1,34 @@
+
+.App {
+  text-align: center;
+  background: #fff;
+  color: #111;
+}
+
+
+.App-logo {
+  display: none;
+}
+
+
+
+.App-header {
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #111;
+  border: 1px solid #111;
+}
+
+
+.App-link {
+  color: #111;
+  text-decoration: underline;
+}
+
+
+/* ...existing code... */

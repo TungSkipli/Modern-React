@@ -1,0 +1,35 @@
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+}
+
+@media (max-width: 768px) {
+    .book-list {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 15px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .book-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1400px) {
+    .book-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1401px) {
+    .book-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
