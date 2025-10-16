@@ -11,6 +11,7 @@ import AccordionPage from './page/accordion';
 import DropDownPage from './page/dropDownPage';
 import ModalPage from './page/modalPage';
 import TablePage from './page/tablePage';
+import SortListPage from './page/sortListPage';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/dropDown" element={<DropDownPage />} />
           <Route path="/modal" element={<ModalPage />} />
           <Route path="/table" element={<TablePage />} />
+          <Route path="/sort-list" element={<SortListPage />} />
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
       </div>

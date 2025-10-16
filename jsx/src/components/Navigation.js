@@ -121,6 +121,20 @@ function Navigation() {
       >
         Fruit Table
       </Link>
+      <Link
+        to="/sort-list"
+        style={{
+          marginRight: '15px',
+          padding: '10px 20px',
+          backgroundColor: '#6c5ce7',
+          color: 'white',
+          textDecoration: 'none',
+          borderRadius: '5px',
+          display: 'inline-block'
+        }}
+      >
+        Sort List
+      </Link>
     </nav>
   );
 }
