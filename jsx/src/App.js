@@ -7,6 +7,8 @@ import Navigation from './components/Navigation';
 
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Book from './page/book';
+import AccordionPage from './page/accordion';
+import DropDownPage from './page/dropDownPage';
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
           <Route path="/animals" element={<Animal />} />
           <Route path="/search-image" element={<SearchImage />} />
           <Route path="/book" element={<Book />} />
+          <Route path="/accordion" element={<AccordionPage />} />
+          <Route path="/dropDown" element={<DropDownPage />} />
+          <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
       </div>
     </Router>

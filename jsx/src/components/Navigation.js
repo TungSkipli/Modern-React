@@ -65,6 +65,34 @@ function Navigation() {
       >
         Books
       </Link>
+      <Link 
+        to="/accordion" 
+        style={{ 
+          marginRight: '15px', 
+          padding: '10px 20px',
+          backgroundColor: '#8ecc57ff',
+          color: 'white',
+          textDecoration: 'none',
+          borderRadius: '5px',
+          display: 'inline-block'
+        }}
+      >
+        accordion
+      </Link>
+      <Link 
+        to="/dropDown" 
+        style={{ 
+          marginRight: '15px', 
+          padding: '10px 20px',
+          backgroundColor: '#3e54cdff',
+          color: 'white',
+          textDecoration: 'none',
+          borderRadius: '5px',
+          display: 'inline-block'
+        }}
+      >
+        DropDown
+      </Link>
     </nav>
   );
 }
