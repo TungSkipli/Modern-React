@@ -12,6 +12,7 @@ import DropDownPage from './page/dropDownPage';
 import ModalPage from './page/modalPage';
 import TablePage from './page/tablePage';
 import SortListPage from './page/sortListPage';
+import CounterPage from './page/counterPage';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/modal" element={<ModalPage />} />
           <Route path="/table" element={<TablePage />} />
           <Route path="/sort-list" element={<SortListPage />} />
+          <Route path="/counter" element={<CounterPage />} />
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
       </div>

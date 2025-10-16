@@ -119,7 +119,7 @@ function Navigation() {
           display: 'inline-block'
         }}
       >
-        Fruit Table
+        Table
       </Link>
       <Link
         to="/sort-list"
@@ -134,6 +134,21 @@ function Navigation() {
         }}
       >
         Sort List
+      </Link>
+
+      <Link
+        to="/counter"
+        style={{
+          marginRight: '15px',
+          padding: '10px 20px',
+          backgroundColor: '#8928a7ff',
+          color: 'white',
+          textDecoration: 'none',
+          borderRadius: '5px',
+          display: 'inline-block'
+        }}
+      >
+        Counter
       </Link>
     </nav>
   );

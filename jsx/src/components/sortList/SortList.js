@@ -15,8 +15,6 @@ const SortList = () => {
 
   return (
     <div className="sort-container">
-      <h2>Real Estate Properties</h2>
-      
       <div className="sort-controls">
         <div className="sort-group">
           <span>Name:</span>
