@@ -93,6 +93,20 @@ function Navigation() {
       >
         DropDown
       </Link>
+      <Link
+        to="/modal"
+        style={{
+          marginRight: '15px',
+          padding: '10px 20px',
+          backgroundColor: '#ffc107',
+          color: 'black',
+          textDecoration: 'none',
+          borderRadius: '5px',
+          display: 'inline-block'
+        }}
+      >
+        Modal
+      </Link>
     </nav>
   );
 }
