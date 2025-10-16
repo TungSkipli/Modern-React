@@ -51,34 +51,22 @@
     color: #2563eb;
 }
 
-.dropdown-menu {
-	color: #fff;
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
 }
 
-.dropdown-content .dropdown-item {
-	background: #fff;
-	color: #000;
-	font-family: Arial, sans-serif;
-	cursor: pointer;
-	padding: 8px 12px;
-	transition: background 0.3s;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	margin: 5px;
-	text-align: center;
-	font-size: 14px;
+.language-dropdown.is-active .language-dropdown-menu {
+    display: block;
 }
 
-.dropdown-content .dropdown-item:hover {
-	background: #b2ebf2;
+.language-dropdown-trigger {
+    width: 100%;
 }
 
-.dropdown-item.is-active {
-	border-color: #2563eb;
-    background-color: #dbeafe;
-}
-
-.dropdown-trigger button {
+.language-dropdown-trigger .language-button {
+    width: 100%;
     padding: 8px 12px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -86,5 +74,58 @@
     background-color: #fff;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.language-dropdown-trigger .language-button:hover {
+    border-color: #999;
+    background-color: #f5f5f5;
+}
+
+.language-dropdown-menu {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.language-dropdown-content {
+    padding: 0;
+}
+
+.language-dropdown-content .language-dropdown-item {
+    background: #fff;
+    color: #000;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: background 0.3s;
+    border: none;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+}
+
+.language-dropdown-content .language-dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.language-dropdown-content .language-dropdown-item:hover {
+    background: #f5f5f5;
+}
+
+.language-dropdown-item.is-active {
+    background-color: #dbeafe;
+    color: #2563eb;
 }

@@ -107,6 +107,20 @@ function Navigation() {
       >
         Modal
       </Link>
+      <Link
+        to="/table"
+        style={{
+          marginRight: '15px',
+          padding: '10px 20px',
+          backgroundColor: '#ff6b6b',
+          color: 'white',
+          textDecoration: 'none',
+          borderRadius: '5px',
+          display: 'inline-block'
+        }}
+      >
+        Fruit Table
+      </Link>
     </nav>
   );
 }

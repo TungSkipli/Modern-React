@@ -1,4 +1,4 @@
-import "./modal.css";
+import "../../Styles/modal/modal.css";
 
 export default function Modal({isOpen, onClose}) {
 
