@@ -1,14 +1,20 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useUsers } from '../../hooks/useUsers';
 import Modal from './Modal';
 import UserListSkeleton from './UserListSkeleton';
+import AlbumManager from './AlbumManager';
 
 const UserList = ({ onEdit }) => {
     const { users, loading, error, removeUser } = useUsers();
     const [deleteModal, setDeleteModal] = useState({ isOpen: false, userId: null, userName: '' });
+    const [expandedUserId, setExpandedUserId] = useState(null);
 
     const handleDeleteClick = (user) => {
         setDeleteModal({ isOpen: true, userId: user.id, userName: user.name });
+    };
+
+    const toggleAlbums = (userId) => {
+        setExpandedUserId(expandedUserId === userId ? null : userId);
     };
 
     const handleConfirmDelete = async () => {
@@ -42,6 +48,7 @@ const UserList = ({ onEdit }) => {
                 <table className="min-w-full">
                     <thead className="bg-gray-50 border-b border-gray-300">
                         <tr>
+                            <th className="px-4 py-3 text-center text-xs font-medium text-gray-600 uppercase w-12"></th>
                             <th className="px-4 py-3 text-center text-xs font-medium text-gray-600 uppercase">ID</th>
                             <th className="px-4 py-3 text-center text-xs font-medium text-gray-600 uppercase">Name</th>
                             <th className="px-4 py-3 text-center text-xs font-medium text-gray-600 uppercase">Email</th>
@@ -49,30 +56,54 @@ const UserList = ({ onEdit }) => {
                             <th className="px-4 py-3 text-center text-xs font-medium text-gray-600 uppercase">Actions</th>
                         </tr>
                     </thead>
-                    <tbody className="divide-y divide-gray-200">
+                    <tbody>
                         {users.map(user => (
-                            <tr key={user.id} className="hover:bg-gray-50 transition">
-                                <td className="px-4 py-3 text-sm text-gray-700">{user.id}</td>
-                                <td className="px-4 py-3 text-sm text-gray-900 font-medium">{user.name}</td>
-                                <td className="px-4 py-3 text-sm text-gray-700">{user.email}</td>
-                                <td className="px-4 py-3 text-sm text-gray-700">{user.phone}</td>
-                                <td className="px-4 py-3 text-sm">
-                                    <div className="text-center">
-                                        <button 
-                                            className="text-gray-700 hover:text-gray-900 underline transition"
-                                            onClick={() => onEdit(user)}
+                            <React.Fragment key={user.id}>
+                                <tr className="hover:bg-gray-50 transition border-b border-gray-200">
+                                    <td className="px-4 py-3 text-center">
+                                        <button
+                                            onClick={() => toggleAlbums(user.id)}
+                                            className="text-gray-600 hover:text-gray-900 transition"
                                         >
-                                            Edit
+                                            <svg 
+                                                className={`w-4 h-4 transition-transform ${expandedUserId === user.id ? 'rotate-90' : ''}`}
+                                                fill="none" 
+                                                stroke="currentColor" 
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                            </svg>
                                         </button>
-                                        <button 
-                                            className="text-gray-700 hover:text-gray-900 underline transition"
-                                            onClick={() => handleDeleteClick(user)}
-                                        >
-                                            Delete
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
+                                    </td>
+                                    <td className="px-4 py-3 text-sm text-gray-700">{user.id}</td>
+                                    <td className="px-4 py-3 text-sm text-gray-900 font-medium">{user.name}</td>
+                                    <td className="px-4 py-3 text-sm text-gray-700">{user.email}</td>
+                                    <td className="px-4 py-3 text-sm text-gray-700">{user.phone}</td>
+                                    <td className="px-4 py-3 text-sm">
+                                        <div className="text-center space-x-2">
+                                            <button 
+                                                className="text-gray-700 hover:text-gray-900 underline transition"
+                                                onClick={() => onEdit(user)}
+                                            >
+                                                Edit
+                                            </button>
+                                            <button 
+                                                className="text-gray-700 hover:text-gray-900 underline transition"
+                                                onClick={() => handleDeleteClick(user)}
+                                            >
+                                                Delete
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {expandedUserId === user.id && (
+                                    <tr>
+                                        <td colSpan="6" className="p-0">
+                                            <AlbumManager userId={user.id} userName={user.name} />
+                                        </td>
+                                    </tr>
+                                )}
+                            </React.Fragment>
                         ))}
                     </tbody>
                 </table>

@@ -4,6 +4,7 @@ const UserListSkeleton = () => {
             <table className="min-w-full">
                 <thead className="bg-gray-50 border-b border-gray-300">
                     <tr>
+                        <th className="px-4 py-3 text-center text-xs font-medium text-gray-600 uppercase w-12"></th>
                         <th className="px-4 py-3 text-center text-xs font-medium text-gray-600 uppercase">ID</th>
                         <th className="px-4 py-3 text-center text-xs font-medium text-gray-600 uppercase">Name</th>
                         <th className="px-4 py-3 text-center text-xs font-medium text-gray-600 uppercase">Email</th>
@@ -14,6 +15,9 @@ const UserListSkeleton = () => {
                 <tbody className="divide-y divide-gray-200">
                     {[...Array(5)].map((_, index) => (
                         <tr key={index} className="animate-pulse">
+                            <td className="px-4 py-3">
+                                <div className="h-4 w-4 bg-gray-200 rounded mx-auto"></div>
+                            </td>
                             <td className="px-4 py-3">
                                 <div className="h-4 bg-gray-200 rounded w-8 mx-auto"></div>
                             </td>
