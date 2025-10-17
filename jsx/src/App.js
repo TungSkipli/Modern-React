@@ -13,29 +13,34 @@ import ModalPage from './page/modalPage';
 import TablePage from './page/tablePage';
 import SortListPage from './page/sortListPage';
 import CounterPage from './page/counterPage';
+import UserPage from './page/userPage';
+import { UserProvider } from './contexts/UserContext';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navigation />
-        
-        <Routes>
-          <Route path="/" element={<Navigate to="/translate" replace />} />
-          <Route path="/translate" element={<TranslateProject />} />
-          <Route path="/animals" element={<Animal />} />
-          <Route path="/search-image" element={<SearchImage />} />
-          <Route path="/book" element={<Book />} />
-          <Route path="/accordion" element={<AccordionPage />} />
-          <Route path="/dropDown" element={<DropDownPage />} />
-          <Route path="/modal" element={<ModalPage />} />
-          <Route path="/table" element={<TablePage />} />
-          <Route path="/sort-list" element={<SortListPage />} />
-          <Route path="/counter" element={<CounterPage />} />
-          <Route path="*" element={<h1>404 Not Found</h1>} />
-        </Routes>
-      </div>
-    </Router>
+    <UserProvider>
+      <Router>
+        <div className="App">
+          <Navigation />
+          
+          <Routes>
+            <Route path="/" element={<Navigate to="/translate" replace />} />
+            <Route path="/translate" element={<TranslateProject />} />
+            <Route path="/animals" element={<Animal />} />
+            <Route path="/search-image" element={<SearchImage />} />
+            <Route path="/book" element={<Book />} />
+            <Route path="/accordion" element={<AccordionPage />} />
+            <Route path="/dropDown" element={<DropDownPage />} />
+            <Route path="/modal" element={<ModalPage />} />
+            <Route path="/table" element={<TablePage />} />
+            <Route path="/sort-list" element={<SortListPage />} />
+            <Route path="/counter" element={<CounterPage />} />
+            <Route path="/users" element={<UserPage />} />
+            <Route path="*" element={<h1>404 Not Found</h1>} />
+          </Routes>
+        </div>
+      </Router>
+    </UserProvider>
   );
 }
 

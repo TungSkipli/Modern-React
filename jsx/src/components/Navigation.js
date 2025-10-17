@@ -150,6 +150,21 @@ function Navigation() {
       >
         Counter
       </Link>
+
+      <Link
+        to="/users"
+        style={{
+          marginRight: '15px',
+          padding: '10px 20px',
+          backgroundColor: '#0d6efd',
+          color: 'white',
+          textDecoration: 'none',
+          borderRadius: '5px',
+          display: 'inline-block'
+        }}
+      >
+        Users
+      </Link>
     </nav>
   );
 }

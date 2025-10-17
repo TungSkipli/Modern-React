@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   margin: 0;
@@ -5,7 +8,6 @@ body {
   background: #fff;
   color: #111;
 }
-
 
 code {
   font-family: 'Courier New', monospace;

@@ -1,12 +1,12 @@
 {
-  "books": [
+  "users": [
     {
-      "title": "hi 21",
+      "name": "tung123",
+      "email": "tunglk292003@gmail.com",
+      "phone": "123",
       "id": 1
-    },
-    {
-      "title": "ok",
-      "id": 2
     }
-  ]
+  ],
+  "albums": [],
+  "photos": []
 }
