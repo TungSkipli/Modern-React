@@ -165,6 +165,21 @@ function Navigation() {
       >
         Users
       </Link>
+
+      <Link
+        to="/map"
+        style={{
+          marginRight: '15px',
+          padding: '10px 20px',
+          backgroundColor: '#0d6efd',
+          color: 'white',
+          textDecoration: 'none',
+          borderRadius: '5px',
+          display: 'inline-block'
+        }}
+      >
+        map
+      </Link>
     </nav>
   );
 }
