@@ -16,6 +16,7 @@ import CounterPage from './page/counterPage';
 import UserPage from './page/userPage';
 import { UserProvider } from './contexts/UserContext';
 import MapPage from './page/mapPage';
+import SeasonPage from './page/seasonPage';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path="/counter" element={<CounterPage />} />
             <Route path="/users" element={<UserPage />} />
             <Route path="/map" element={<MapPage />} />
+            <Route path="/season" element={<SeasonPage />} />
             <Route path="*" element={<h1>404 Not Found</h1>} />
           </Routes>
         </div>

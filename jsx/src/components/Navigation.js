@@ -180,6 +180,20 @@ function Navigation() {
       >
         map
       </Link>
+      <Link
+        to="/season"
+        style={{
+          marginRight: '15px',
+          padding: '10px 20px',
+          backgroundColor: '#667eea',
+          color: 'white',
+          textDecoration: 'none',
+          borderRadius: '5px',
+          display: 'inline-block'
+        }}
+      >
+        Weather
+      </Link>
     </nav>
   );
 }
