@@ -17,6 +17,8 @@ import UserPage from './page/userPage';
 import { UserProvider } from './contexts/UserContext';
 import MapPage from './page/mapPage';
 import SeasonPage from './page/seasonPage';
+import Youtube from './page/youtube';
+import YoutubeDetailPage from './page/youtubeDetailPage';
 
 function App() {
   return (
@@ -40,6 +42,8 @@ function App() {
             <Route path="/users" element={<UserPage />} />
             <Route path="/map" element={<MapPage />} />
             <Route path="/season" element={<SeasonPage />} />
+            <Route path="/youtube" element={<Youtube />} />
+            <Route path="/youtube/:videoId" element={<YoutubeDetailPage />} />
             <Route path="*" element={<h1>404 Not Found</h1>} />
           </Routes>
         </div>

@@ -194,6 +194,21 @@ function Navigation() {
       >
         Weather
       </Link>
+
+      <Link
+        to="/youtube"
+        style={{
+          marginRight: '15px',
+          padding: '10px 20px',
+          backgroundColor: '#ff4500',
+          color: 'white',
+          textDecoration: 'none',
+          borderRadius: '5px',
+          display: 'inline-block'
+        }}
+      >
+        youtube
+      </Link>
     </nav>
   );
 }
